@@ -7,6 +7,9 @@ A Streamlit map template
 """
 
 st.sidebar.title("About")
+wind_speed = st.number_input("Input a wind speed in m/s.", 0, 10)
+power_density = (0.5)*(1.225)*((wind_speed)**3)
+st.write(f'The power density is {power_density}')
 st.sidebar.info(markdown)
 logo = "https://i.imgur.com/UbOXYAU.png"
 st.sidebar.image(logo)
